@@ -1,0 +1,19 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PicApp.Pages.GalleryPage">
+    <ContentPage.Content>
+        <CollectionView ItemsSource="{Binding ImageCollection}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Define the layout for each item in the collection -->
+                    <Frame Padding="5" BackgroundColor="LightGray" HasShadow="True">
+                        <StackLayout>
+                            <Image Source="{Binding Value}" Aspect="AspectFill" />
+                            <Label Text="{Binding Key}" FontSize="Small" HorizontalTextAlignment="Center" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>
